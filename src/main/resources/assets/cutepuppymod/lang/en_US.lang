@@ -1,0 +1,100 @@
+# Item localizations
+
+# Blocks
+tile.EnderCoreBlock : "Ender Core Block
+
+#Commpressed Cores
+tile.BlueCoreBlock : "Blue Core Block
+tile.RedCoreBlock : "Red Core Block
+tile.GreenCoreBlock : "Green Core Block
+tile.PurpleCoreBlock : "Purple Core Block
+tile.YellowCoreBlock : "Yellow Core Block
+tile.SteveCoreBlock : "Steve Core Block
+tile.HerobrineCoreBlock : "Herobrine Core Block
+tile.TheCoreBlock : "The Core of Cores Block
+
+# Items
+## Colored Puppys
+"item.cutepuppymod.SpawnRedPuppy" : "Spawn A Red Puppy"
+"item.cutepuppymod.SpawnGreenPuppy" : "Spawn A Green Puppy"
+"item.cutepuppymod.SpawnBluePuppy" : "Spawn A Blue Puppy"
+"item.cutepuppymod.SpawnPurplePuppy" : "Spawn A Purple Puppy"
+"item.cutepuppymod.SpawnYellowPuppy" : "Spawn A Yellow Puppy"
+## Custom Puppys
+"item.cutepuppymod.SpawnHazardPuppy : "Spawn Mr_Hazaeds Puppy"
+"item.cutepuppymod.SpawnSixPuppy : "Spawn Sixkillers Puppy"
+"item.cutepuppymod.SpawnPurplePuppy : "" Spawn A Purple Puppy"
+"item.cutepuppymod.SpawnStevePuppy : "Spawm A Steves Puppy"
+"item.cutepuppymod.SpawnHerobrinePuppy : "Spawn A Herobrines Puppy"
+"item.cutepuppymod.SpawnEnderPuppy : "Spawn A Ender Puppy"
+
+
+###PupCores
+"item.cutepuppymod.BluePuppyCore : "Blue Puppy Core"
+"item.cutepuppymod.RedPuppyCore : "Red Puppy Core"
+"item.cutepuppymod.GreenPuppyCore : "Green Puppy Core"
+"item.cutepuppymod.PurplePuppyCore : "Purple Puppy Core"
+"item.cutepuppymod.YellowPuppyCore : "Yellow Puppy Core"
+"item.cutepuppymod.EnderCore : "Ender Core"
+"item.cutepuppymod.StevePuppyCore : "Steve Puppy Core"
+"item.cutepuppymod.HerobrinePuppyCore : "Herobrine Puppy Core"
+
+###Swords
+"item.cutepuppymod.FreddysMic : "Microphone
+"item.cutepuppymod.BluePuppySword : "Blue Puppy Sword"
+"item.cutepuppymod.RedPuppySword : "Red Puppy Sword"
+"item.cutepuppymod.GreenPuppySword : "Green Puppy Sword"
+"item.cutepuppymod.YellowPuppySword : "Yellow Puppy Sword"
+"item.cutepuppymod.PurplePuppySword : "Purple Puppy Sword"
+"item.cutepuppymod.BanHammer : "SixKillers Ban Hammer"
+
+##Other Items
+"item.cutepuppymod.EmptySyringe : "Empty Syringe"
+"item.cutepuppymod.FullSyringe : "Full Syringe"
+
+# Entitys
+## Colord Puppys
+entity.RedPuppy : "Red Puppy
+entity.GreenPuppy : "Green Puppy
+entity.YellowPuppy : "Yellow Puppy
+entity.BluePuppy : "Blue Puppy
+entity.PurplePuppy : "Purple Puppy
+## Custom Puppys
+entity.SixPuppy : "Sixkillers Puppy
+entity.StevePuppy : "Steves Puppy
+entity.HerobrinePuppy : "Herobrines Puppy
+entity.HazardPuppy : "Mr_Hazaeds Puppy
+entity.EnderPuppy : "Ender Puppy
+entity.EnderBossPuppy : "Ender Boss Puppy
+entity.TheBossPuppy : "The Boss Puppy
+
+# CreativeTabs
+"itemGroup.cutepuppymod.itemgroup" : "Puppy's Tab"
+"item.cutepuppymod.iconfortab" : "Icon For Creative Tab"
+
+# Advancements
+advancements.cutepuppymod.root.title : "CutePuppyMod
+advancements.cutepuppymod.root.description : "Go Find CutePuppys
+#Kill any Color puppy
+advancements.cutepuppymod.killpuppy.title : "How could you?
+advancements.cutepuppymod.killpuppy.description : "Kill a Puppy
+#Kill Sixkiller Puppy
+advancements.cutepuppymod.killedbosspuppy.title : "I Killed an Op!
+advancements.cutepuppymod.killedbosspuppy.description : "Kill The Boss Puppy
+#Kill Ender Puppy
+advancements.cutepuppymod.enderpuppy.title : "Ender Puppys
+advancements.cutepuppymod.enderpuppy.description : "Find the Endermans Puppys!
+#Kill Herobrine Puppy
+advancements.cutepuppymod.herobrine.title : "Herobrine Removed
+advancements.cutepuppymod.herobrine.description : "Herobrine Removed
+#Kill EnderBoss Puppy
+advancements.cutepuppymod.killedednderbosspuppy.title : "I Killed the Ender Boss Puppy
+advancements.cutepuppymod.killedednderbosspuppy.description : "Kill The Ender Boss Puppy
+#CoresOfCores
+advancements.cutepuppymod.thecoreofcors.title : "Ummm what are you doing with that?
+advancements.cutepuppymod.thecoreofcors.description : "Craft a Core of Cores Block
+#The BOSS
+advancements.cutepuppymod.thebosspuppy.title : "WHAT HAVE YOU DONE!?
+advancements.cutepuppymod.thebosspuppy.description : "Summon The Boss Puppy
+advancements.cutepuppymod.thebosspuppydeath.title : "I Fixed It
+advancements.cutepuppymod.thebosspuppydeath.description : "Kill The Boss Puppy

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "cutepuppymod",
+  "version": "${version}",
+
+  "name": "CutePuppyMod",
+  "description": "Puppys!",
+  "authors": [
+    "manmaed"
+  ],
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.manmaed.cutepuppymod.CutePuppyMod"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  }
+}
