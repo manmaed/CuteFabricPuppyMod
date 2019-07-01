@@ -29,6 +29,6 @@ public class CutePuppyMod implements ModInitializer {
         CPMItems.RegisterItems();
         CPMBlocks.RegisterBlocks();
         CPMEntitys.RegisterEntitys();
-        CPMEntitys.clientEntitystuff();
+        //CPMEntitys.clientEntitystuff();
     }
 }

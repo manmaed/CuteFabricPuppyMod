@@ -19,6 +19,6 @@ public class GreenPuppyRenderer extends MobEntityRenderer<EntityGreenPuppy, Mode
 
     @Override
     protected Identifier getTexture(EntityGreenPuppy entityGreenPuppy) {
-        return new Identifier(Reference.MOD_ID + ";textures/entity/greenpuppy.png");
+        return new Identifier(Reference.MOD_ID + "textures/entity/greenpuppy.png");
     }
 }

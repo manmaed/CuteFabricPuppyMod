@@ -2,7 +2,6 @@ package net.manmaed.cutepuppymod.client.model;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.manmaed.cutepuppymod.CutePuppyMod;
 import net.minecraft.client.model.Cuboid;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.entity.Entity;
@@ -11,34 +10,34 @@ import net.minecraft.util.math.MathHelper;
 @Environment(EnvType.CLIENT)
 public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   //fields
-  public Cuboid head;
-  public Cuboid Nose;
-  public Cuboid Body;
-  public Cuboid LegFL;
-  public Cuboid LegFR;
-  public Cuboid LegBL;
-  public Cuboid LegBR;
-  public Cuboid Tail;
-  public Cuboid EarR;
-  public Cuboid EarL;
-  public Cuboid ThePinkThing;
+  private final Cuboid head;
+  private final Cuboid nose;
+  private final Cuboid Body;
+  private final Cuboid LegFL;
+  private final Cuboid LegFR;
+  private final Cuboid LegBL;
+  private final Cuboid LegBR;
+  private final Cuboid Tail;
+  private final Cuboid EarR;
+  private final Cuboid EarL;
+  private final Cuboid ThePinkThing;
 
   //Hat
-  public Cuboid Hatp1;
-  public Cuboid Hatp2;
-  public Cuboid Hatp3;
-  public Cuboid HatBottem;
-  public Cuboid Hatp4;
-  public  Cuboid Hatp5;
-  public Cuboid ballball;
+  private final Cuboid Hatp1;
+  private final Cuboid Hatp2;
+  private final Cuboid Hatp3;
+  private final Cuboid HatBottem;
+  private final Cuboid Hatp4;
+  private final Cuboid Hatp5;
+  private final Cuboid ballball;
 
   //Mask
-  public Cuboid Face;
-  public Cuboid Band1;
-  public Cuboid Band2;
+  private final Cuboid Face;
+  private final Cuboid Band1;
+  private final Cuboid Band2;
 
   //Cake
-  public  Cuboid Cake;
+  private final Cuboid Cake;
   
   public ModelRedPuppy()
   {
@@ -51,13 +50,13 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
       head.setTextureSize(64, 32);
       head.mirror = true;
       setRotation(head, 0.0523599F, 0F, 0F);
-      Nose = new Cuboid(this, 0, 26);
-      Nose.addBox(-1.5F, 0F, -1F, 3, 1, 1);
+      nose = new Cuboid(this, 0, 26);
+      nose.addBox(-1.5F, 0F, -1F, 3, 1, 1);
       //Nose.setRotationPoint(0.5F, 16.5F, -6.7F);
-      Nose.setRotationPoint(0.0F, -2.8F, -2.7F);
-      Nose.setTextureSize(64, 32);
-      Nose.mirror = true;
-      setRotation(Nose, 0.0349066F, 0F, 0F);
+      nose.setRotationPoint(0.0F, -2.8F, -2.7F);
+      nose.setTextureSize(64, 32);
+      nose.mirror = true;
+      setRotation(nose, 0.0349066F, 0F, 0F);
       Body = new Cuboid(this, 0, 10);
       Body.addBox(-2.5F, 0F, 0F, 5, 4, 6);
       Body.setRotationPoint(0.5F, 17F, -5F);
@@ -188,9 +187,9 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
       //tings
       head.addChild(EarL);
       head.addChild(EarR);
-      head.addChild(Nose);
+      head.addChild(nose);
       head.addChild(ThePinkThing);
-    if(CutePuppyMod.christmas) {
+    /*if(CutePuppyMod.christmas) {
       head.addChild(HatBottem);
       head.addChild(Hatp1);
       head.addChild(Hatp2);
@@ -206,7 +205,7 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
     }
     if(CutePuppyMod.bday){
       head.addChild(Cake);
-    }
+    }*/
   }
   
   public void render(T entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -230,12 +229,12 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   }
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, T entity)
   {
-    super.setAngles(entity, f, f1, f2, f3, f4, f5);
-    this.head.rotationPointX = f4 / (180F / (float)Math.PI);
-      this.head.rotationPointY = f3 / (180F / (float)Math.PI);
-      this.LegFL.rotationPointX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
-      this.LegFR.rotationPointX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
-      this.LegBL.rotationPointX = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
-      this.LegBR.rotationPointX = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+    //super.setAngles(entity, f, f1, f2, f3, f4, f5);
+    this.head.yaw = f4 / (180F / (float)Math.PI);
+      this.head.pitch = f3 / (180F / (float)Math.PI);
+      this.LegFL.pitch = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
+      this.LegFR.pitch = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+      this.LegBL.pitch = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
+      this.LegBR.pitch = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
   }
 }

@@ -1,7 +1,6 @@
 package net.manmaed.cutepuppymod.entity;
 
 import net.manmaed.cutepuppymod.item.CPMItems;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
@@ -20,8 +19,8 @@ import net.minecraft.world.World;
  * Created by manmaed on 21/06/2019.
  */
 public class EntityGreenPuppy extends AnimalEntity {
-    protected EntityGreenPuppy(EntityType<? extends AnimalEntity>  entityType, World world) {
-        super(entityType, world);
+    public EntityGreenPuppy(World world) {
+        super(CPMEntitys.greenpuppy, world);
         this.targetSelector.add(0, new SwimGoal(this));
         this.targetSelector.add(1, new EscapeDangerGoal(this, 1.0D));
         this.targetSelector.add(2, new AnimalMateGoal(this, 1.25D));

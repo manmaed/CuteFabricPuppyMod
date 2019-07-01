@@ -8,6 +8,10 @@ import net.manmaed.cutepuppymod.client.render.entity.GreenPuppyRenderer;
 import net.manmaed.cutepuppymod.libs.LogHelper;
 import net.manmaed.cutepuppymod.libs.Reference;
 import net.minecraft.entity.EntityCategory;
+import net.minecraft.entity.EntityType;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -16,8 +20,12 @@ import net.minecraft.util.registry.Registry;
  */
 public class CPMEntitys {
 
+    public static final EntityType<EntityGreenPuppy> greenpuppy = FabricEntityTypeBuilder.create(EntityCategory.AMBIENT, EntityGreenPuppy::new).size(0.5f,0.5f).build();;
+
     public static void RegisterEntitys() {
         LogHelper.info("Hello Form Entitys Regestery!");
+        /*greenpuppy = FabricEntityTypeBuilder.create(EntityCategory.AMBIENT, EntityGreenPuppy::new).size(0.5f,0.5f).build();*/
+
         /*
         EntityHelper.registerEntity(ResourceLocationHelper.getResourceLocation("greenpuppy"), EntityPuppy.class, "GreenPuppy", id++, 0x3cff00, 0x3cff00);
 		EntityHelper.registerEntity(ResourceLocationHelper.getResourceLocation("redpuppy"), EntityRedPuppy.class, "RedPuppy", id++, 0xffb2b2, 0xf80000);
@@ -33,17 +41,29 @@ public class CPMEntitys {
 		EntityHelper.registerEntity(ResourceLocationHelper.getResourceLocation("enderbosspuppy"), EntityEnderBossPuppy.class, "EnderBossPuppy", id++, 0x151515, 0x000000);
 		EntityHelper.registerEntity(ResourceLocationHelper.getResourceLocation("thebosspuppy"), EntityTheBossPuppy.class, "TheBossPuppy", id++, 0x151515, 0x000000);
          */
-        makeEntitys("greenpuppy", EntityCategory.AMBIENT);
+        Registry.register(Registry.ENTITY_TYPE, new Identifier(Reference.MOD_ID, "greenpuppy"), greenpuppy);
+        makeSpawnEgg("greenpuppy", greenpuppy, 0x3cff00, 0x3cff00);
+
+        //makeEntitys("greenpuppy", EntityCategory.AMBIENT, greenpuppy, 0x3cff00, 0x3cff00);
+
+        /*makeEntitys("enderbosspuppy", EntityCategory.MONSTER);*/
 
     }
 
-    public static void makeEntitys(String entityName, EntityCategory entityCategory){
-        Registry.register(Registry.ENTITY_TYPE, new Identifier(Reference.MOD_ID, entityName), FabricEntityTypeBuilder.create(entityCategory).build());
+    public static void makeEntitys(String entityName, EntityCategory entityCategory, EntityType type, int eggPrimary, int eggSecondary){
+        //Registry.register(Registry.ENTITY_TYPE, new Identifier(Reference.MOD_ID, entityName), type);
+        Registry.register(Registry.ITEM, new Identifier(Reference.MOD_ID, entityName + "_spawn_egg"), new SpawnEggItem(type, eggPrimary, eggSecondary, new Item.Settings().group(ItemGroup.MISC)));
+    }
+
+    public static void makeSpawnEgg(String entityName, EntityType type, int eggPrimary, int eggSecondary){
+        //Registry.register(Registry.ENTITY_TYPE, new Identifier(Reference.MOD_ID, entityName), type);
+        Registry.register(Registry.ITEM, new Identifier(Reference.MOD_ID, entityName + "_spawn_egg"), new SpawnEggItem(type, eggPrimary, eggSecondary, new Item.Settings().group(ItemGroup.MISC)));
     }
 
     @Environment(EnvType.CLIENT)
     public static void clientEntitystuff() {
         EntityRendererRegistry.INSTANCE.register(EntityGreenPuppy.class, (entityRenderDispatcher, context) -> new GreenPuppyRenderer(entityRenderDispatcher));
+       // EntityRendererRegistry.INSTANCE.register(EntityEnderBossPuppy.class, (entityRenderDispatcher, context) -> EnderBossPuppyRenderer(entityRenderDispatcher));
     }
 }
 /*
