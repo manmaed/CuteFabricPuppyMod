@@ -10,7 +10,7 @@ import net.minecraft.util.math.MathHelper;
 @Environment(EnvType.CLIENT)
 public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   //fields
-  private final Cuboid head;
+  protected Cuboid head;
   private final Cuboid nose;
   private final Cuboid Body;
   private final Cuboid LegFL;

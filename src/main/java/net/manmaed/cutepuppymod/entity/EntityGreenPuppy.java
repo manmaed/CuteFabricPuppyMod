@@ -1,13 +1,11 @@
 package net.manmaed.cutepuppymod.entity;
 
-import net.manmaed.cutepuppymod.item.CPMItems;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -53,7 +51,7 @@ public class EntityGreenPuppy extends AnimalEntity {
         return SoundEvents.ENTITY_WOLF_DEATH;
     }
 
-    @Override
+    /*@Override
     protected void dropLoot(DamageSource damageSource_1, boolean boolean_1) {
         this.dropItem(new ItemConvertible() {
             @Override
@@ -61,7 +59,7 @@ public class EntityGreenPuppy extends AnimalEntity {
                 return CPMItems.greencore;
             }
         }, 1);
-    }
+    }*/
 
     @Override
     public PassiveEntity createChild(PassiveEntity passiveEntity) {

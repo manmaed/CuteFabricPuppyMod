@@ -20,7 +20,7 @@ import net.minecraft.util.registry.Registry;
  */
 public class CPMEntitys {
 
-    public static final EntityType<EntityGreenPuppy> greenpuppy = FabricEntityTypeBuilder.create(EntityCategory.AMBIENT, EntityGreenPuppy::new).size(0.5f,0.5f).build();;
+    public static final EntityType<EntityGreenPuppy> greenpuppy = FabricEntityTypeBuilder.create(EntityCategory.AMBIENT, EntityGreenPuppy::new).size(0.5f,0.5f).build();
 
     public static void RegisterEntitys() {
         LogHelper.info("Hello Form Entitys Regestery!");
@@ -50,10 +50,10 @@ public class CPMEntitys {
 
     }
 
-    public static void makeEntitys(String entityName, EntityCategory entityCategory, EntityType type, int eggPrimary, int eggSecondary){
+    /*public static void makeEntitys(String entityName, EntityCategory entityCategory, EntityType type, int eggPrimary, int eggSecondary){
         //Registry.register(Registry.ENTITY_TYPE, new Identifier(Reference.MOD_ID, entityName), type);
         Registry.register(Registry.ITEM, new Identifier(Reference.MOD_ID, entityName + "_spawn_egg"), new SpawnEggItem(type, eggPrimary, eggSecondary, new Item.Settings().group(ItemGroup.MISC)));
-    }
+    }*/
 
     public static void makeSpawnEgg(String entityName, EntityType type, int eggPrimary, int eggSecondary){
         //Registry.register(Registry.ENTITY_TYPE, new Identifier(Reference.MOD_ID, entityName), type);
@@ -63,6 +63,7 @@ public class CPMEntitys {
     @Environment(EnvType.CLIENT)
     public static void clientEntitystuff() {
         EntityRendererRegistry.INSTANCE.register(EntityGreenPuppy.class, (entityRenderDispatcher, context) -> new GreenPuppyRenderer(entityRenderDispatcher));
+        LogHelper.info("CLIENT!");
        // EntityRendererRegistry.INSTANCE.register(EntityEnderBossPuppy.class, (entityRenderDispatcher, context) -> EnderBossPuppyRenderer(entityRenderDispatcher));
     }
 }

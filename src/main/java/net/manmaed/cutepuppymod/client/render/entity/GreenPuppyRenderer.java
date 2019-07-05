@@ -13,12 +13,15 @@ import net.minecraft.util.Identifier;
 public class GreenPuppyRenderer extends MobEntityRenderer<EntityGreenPuppy, ModelRedPuppy<EntityGreenPuppy>> {
 
     public GreenPuppyRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new ModelRedPuppy<>(), 1);
+        super(entityRenderDispatcher, new ModelRedPuppy(), 0.25F);
         //super(entityRenderDispatcher_1, new CreeperEntityModel<>(), 1);
     }
 
+    private static final Identifier skin = new Identifier(Reference.MOD_ID + "textures/entity/greenpuppy.png");
+
     @Override
     protected Identifier getTexture(EntityGreenPuppy entityGreenPuppy) {
-        return new Identifier(Reference.MOD_ID + "textures/entity/greenpuppy.png");
+        return skin;
     }
+
 }
