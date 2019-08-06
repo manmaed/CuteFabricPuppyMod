@@ -11,7 +11,7 @@ classes/
 *.iml
 *.ipr
 *.iws
-
+*.java__jb_tmp__
 # vscode
 
 .settings/
