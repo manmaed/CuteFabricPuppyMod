@@ -16,5 +16,10 @@
   "item.cutepuppymod.purplepuppysword" : "Purple Puppy Sword",
   "item.cutepuppymod.banhammer" : "SixKillers Ban Hammer",
   "item.cutepuppymod.emptysyringe" : "Empty Syringe",
-  "item.cutepuppymod.fullsyringe" : "Full Syringe"
+  "item.cutepuppymod.fullsyringe" : "Full Syringe",
+
+  "item.cutepuppymod.greenpuppy_spawn_egg":"Green Puppy Spawn Egg",
+
+  "entity.cutepuppymod.greenpuppy":"Green Puppy",
+  "":""
 }

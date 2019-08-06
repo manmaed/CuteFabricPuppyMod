@@ -21,6 +21,7 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   private final Cuboid EarR;
   private final Cuboid EarL;
   private final Cuboid ThePinkThing;
+  //private final Cuboid testing_pea;
 
   //Hat
   private final Cuboid Hatp1;
@@ -43,7 +44,17 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   {
     textureWidth = 64;
     textureHeight = 32;
-    
+
+   /* testing_pea = new Cuboid(this, 0, 0 );
+    testing_pea.addBox(0F, 0F, 0F, 7, 7, 7, 0.0F);
+    testing_pea.setRotationPoint(0F, 10F, -16F);
+    testing_pea.setTextureSize(64, 32);
+    setRotation(testing_pea, 0F, 0F, 0F);*/
+
+
+
+
+    //CODE BELOW
       head = new Cuboid(this, 0, 0);
       head.addBox(-2.5F, -5F, -3F, 5, 5, 5);
       head.setRotationPoint(0.5F, 19F, -4F);
