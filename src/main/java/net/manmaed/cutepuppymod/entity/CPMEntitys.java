@@ -4,7 +4,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.render.EntityRendererRegistry;
 import net.fabricmc.fabric.api.entity.FabricEntityTypeBuilder;
-import net.manmaed.cutepuppymod.client.render.entity.GreenPuppyRenderer;
+import net.manmaed.cutepuppymod.client.render.entity.TestRenderer;
 import net.manmaed.cutepuppymod.libs.LogHelper;
 import net.manmaed.cutepuppymod.libs.Reference;
 import net.minecraft.entity.EntityCategory;
@@ -62,8 +62,9 @@ public class CPMEntitys {
 
     @Environment(EnvType.CLIENT)
     public static void clientEntitystuff() {
-        EntityRendererRegistry.INSTANCE.register(EntityGreenPuppy.class, (entityRenderDispatcher, context) -> new GreenPuppyRenderer(entityRenderDispatcher));
+        //EntityRendererRegistry.INSTANCE.register(EntityGreenPuppy.class, (entityRenderDispatcher, context) -> new GreenPuppyRenderer(entityRenderDispatcher));
         LogHelper.info("CLIENT!");
+        EntityRendererRegistry.INSTANCE.register(EntityGreenPuppy.class, (entityRenderDispatcher, context) -> new TestRenderer(entityRenderDispatcher));
        // EntityRendererRegistry.INSTANCE.register(EntityEnderBossPuppy.class, (entityRenderDispatcher, context) -> EnderBossPuppyRenderer(entityRenderDispatcher));
     }
 }

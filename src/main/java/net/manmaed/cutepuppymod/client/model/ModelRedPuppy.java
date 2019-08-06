@@ -10,7 +10,7 @@ import net.minecraft.util.math.MathHelper;
 @Environment(EnvType.CLIENT)
 public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   //fields
-  protected Cuboid head;
+  private final Cuboid head;
   private final Cuboid nose;
   private final Cuboid Body;
   private final Cuboid LegFL;
@@ -210,7 +210,7 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   
   public void render(T entity, float f, float f1, float f2, float f3, float f4, float f5)
   {
-    super.render(entity, f, f1, f2, f3, f4, f5);
+    //super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5, entity);
     head.render(f5);
     Body.render(f5);
@@ -229,9 +229,8 @@ public class ModelRedPuppy<T extends Entity> extends EntityModel<T> {
   }
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, T entity)
   {
-    //super.setAngles(entity, f, f1, f2, f3, f4, f5);
-    this.head.yaw = f4 / (180F / (float)Math.PI);
-      this.head.pitch = f3 / (180F / (float)Math.PI);
+    super.setAngles(entity, f, f1, f2, f3, f4, f5);
+      this.head.yaw = f3 / (180F / (float)Math.PI);
       this.LegFL.pitch = MathHelper.cos(f * 0.6662F) * 1.4F * f1;
       this.LegFR.pitch = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
       this.LegBL.pitch = MathHelper.cos(f * 0.6662F + (float)Math.PI) * 1.4F * f1;
