@@ -11,9 +11,8 @@ classes/
 *.iml
 *.ipr
 *.iws
-*.java*
-*.iws*
 # vscode
+*.class
 
 .settings/
 .vscode/

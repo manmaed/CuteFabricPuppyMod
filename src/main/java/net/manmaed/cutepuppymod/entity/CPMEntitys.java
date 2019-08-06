@@ -43,11 +43,8 @@ public class CPMEntitys {
          */
         Registry.register(Registry.ENTITY_TYPE, new Identifier(Reference.MOD_ID, "greenpuppy"), greenpuppy);
         makeSpawnEgg("greenpuppy", greenpuppy, 0x3cff00, 0x3cff00);
-
         //makeEntitys("greenpuppy", EntityCategory.AMBIENT, greenpuppy, 0x3cff00, 0x3cff00);
-
         /*makeEntitys("enderbosspuppy", EntityCategory.MONSTER);*/
-
     }
 
     /*public static void makeEntitys(String entityName, EntityCategory entityCategory, EntityType type, int eggPrimary, int eggSecondary){
